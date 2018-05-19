@@ -35,20 +35,23 @@ function removeComment(id) {
 
 
 //Thumb up
-function thumbUpComment(id) {
+function thumbUpComment(commentId) {
     return {
         type: THUMB_UP_COMMENT,
-        id
+        id: commentId
     }
 }
 
 //Thumb down
-function thumbDownComment(id) {
+function thumbDownComment(commentId) {
     return {
         type: THUMB_DOWN_COMMENT,
-        id
+        id: commentId
     }
 }
 
 
 export {addComment};
+export {thumbUpComment};
+export {thumbDownComment};
+export {removeComment};

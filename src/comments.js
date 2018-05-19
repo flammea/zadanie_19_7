@@ -26,12 +26,12 @@ function comments(state=[], action){
   
         case THUMB_UP_COMMENT:
             return state.map(comment => {
-                return comment.id === action.id ? Object.assign({}, comment, {votes: action.votes + 1}) :  comment
+                return comment.id === action.id ? Object.assign({}, comment, {votes: comment.votes + 1}) :  comment
             });
             
         case THUMB_DOWN_COMMENT:
             return state.map(comment => {
-                return comment.id === action.id ? Object.assign({}, comment, {votes: action.votes - 1}) :  comment
+                return comment.id === action.id ? Object.assign({}, comment, {votes: comment.votes - 1}) :  comment
             });
             
         default: 

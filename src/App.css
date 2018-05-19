@@ -1,28 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  max-width: 500px;
+  font-family: "Open Sans";
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+ul, li {
+  margin: 10px auto;
+  list-style-type: none;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+li {
+  display: block;
 }
 
-.App-title {
-  font-size: 1.5em;
+p {
+  color: #FFFFFF;
+  margin: 100px auto;
+  background-color: #76EBFF;
+  width: 500px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 5px;
+  border: none;
+  font-weight: thin;
+  font-size: 30px;
 }
 
-.App-intro {
-  font-size: large;
+.commentText {
+  font-size: 20px;
+  color: #B7AD99;
+  display: block;
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.commentVotes {
+  color: #B7AD99;
+  display: block;
+  margin: 5px;
 }
+
+button {
+  font-size: 12px;
+  margin: 5px; 
+  border-radius: 50%;
+  width, height: 35px;
+  padding: 5px;
+
+}
+
+button:focus {
+  outline: none;
+}
+
+.btnDelete {
+  background-color: #B7AD99;
+  border: none;
+  color: #FFFFFF;
+} 
+
+.btnUp {
+  background-color: #37FF8B;
+  border: none;
+  color: #FFFFFF;
+}
+
+.btnUp:hover {
+  background-color: #FFFFFF;
+  border: 2px solid #37FF8B;
+  color: #37FF8B;
+}
+.btnDown {
+  background-color: #FF4365;
+  border: none;
+  color: #FFFFFF;
+}
+
+.btnDown:hover {
+  background-color: #FFFFFF;
+  border: 2px solid #FF4365;
+  color: #FF4365;
+}
+

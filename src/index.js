@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import reducer from './reducer.js';
@@ -17,8 +16,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+store.dispatch(addComment('# drugi komentarz'));
+store.dispatch(addComment('# pierwszy komentarz'));
 
-store.dispatch(addComment('pierwszy komentarz'));
-store.dispatch(addComment('drugi komentarz'));
 
 registerServiceWorker();
