@@ -5,7 +5,6 @@ import {THUMB_UP_COMMENT} from './actions';
 import {THUMB_DOWN_COMMENT} from './actions';
 
 
-
 function comments(state=[], action){
     switch(action.type){
         case ADD_COMMENT:
@@ -14,27 +13,25 @@ function comments(state=[], action){
                         id: action.id,
                         text: action.text,
                         votes: 0
-                    }, ...state.comments];
+                    }, ...state];
         
         case REMOVE_COMMENT:
-            return state.comments.filter(comment => comment.id !== action.id);
+            return state.filter(comment => comment.id !== action.id);
             
-        case EDIT_COMMENT:
-            return state.comments.map(comment => {
-                (comment.id === action.id) ? return {...comment, text: action.text} : return comment;
-                }
-            });
+       case EDIT_COMMENT:
+    		return state.map(comment => {
+        		return comment.id === action.id ? Object.assign({}, comment, {text: action.text}) : comment
+      		});
+ 
   
         case THUMB_UP_COMMENT:
-            return state.comments.map(comment => {
-                (comment.id === action.id) ? return {...comment, votes: action.votes + 1} : return comment;
-                }
+            return state.map(comment => {
+                return comment.id === action.id ? Object.assign({}, comment, {votes: action.votes + 1}) :  comment
             });
             
         case THUMB_DOWN_COMMENT:
-            return state.comments.map(comment => {
-                (comment.id === action.id) ? return {...comment, votes: action.votes - 1} : return comment;
-                }
+            return state.map(comment => {
+                return comment.id === action.id ? Object.assign({}, comment, {votes: action.votes - 1}) :  comment
             });
             
         default: 

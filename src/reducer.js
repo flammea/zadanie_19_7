@@ -7,3 +7,5 @@ const reducer = combineReducers({
 		comments,
 		users
 });
+
+export default reducer;
