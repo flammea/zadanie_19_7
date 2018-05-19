@@ -16,8 +16,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-store.dispatch(addComment('# drugi komentarz'));
-store.dispatch(addComment('# pierwszy komentarz'));
+store.dispatch(addComment('# your second comment'));
+store.dispatch(addComment('# your first comment'));
 
 
 registerServiceWorker();

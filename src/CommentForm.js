@@ -14,7 +14,7 @@ const CommentForm = ({ text }) => {
 	      }}>
 		    <input
 		       className="inputText"
-		       placeholder="Dodaj nowy komentarz"
+		       placeholder="Add new comment"
 		       onChange={(e) => (commentText = e.target.value)}/>
 			<button>
 				<i className={"fas fa-angle-double-right"}></i>

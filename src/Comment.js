@@ -4,7 +4,7 @@ import thumbDownComment from './Comment';
 import removeComment from './Comment';
 
 const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, removeComment }) =>
-  <li>
+  <li className={"listItem"}>
   	<span className={'commentText'}>{text}
   		<button className={'btnDelete'} onClick={() => removeComment(id)}>
   			<i className={"far fa-trash-alt"}></i>
