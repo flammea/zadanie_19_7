@@ -5,9 +5,13 @@ import registerServiceWorker from './registerServiceWorker';
 import reducer from './reducer.js';
 import { Provider } from 'react-redux';
 import { addComment } from './actions.js';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
+import DevTools from './DevTools';
 
-const store = createStore(reducer);
+const store = createStore(
+  reducer,
+  DevTools.instrument()
+);
 
 ReactDOM.render(
   <Provider store={store}>
