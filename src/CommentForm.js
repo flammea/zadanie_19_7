@@ -9,8 +9,8 @@ const CommentForm = ({ text }) => {
 	    <form
 	      className="inputForm"
 	      onSubmit={(event) => {
-	        text(commentText);
 	        event.preventDefault();
+	        text(commentText)
 	      }}>
 		    <input
 		       className="inputText"

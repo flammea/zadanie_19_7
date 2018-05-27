@@ -4,7 +4,7 @@ import {addComment} from './actions';
 
 
 const mapDispatchToProps = dispatch => ({
-  addComment: (text) => dispatch(addComment(text)) 
+  text: (commentText) => dispatch(addComment(commentText)) 
 });
 
 export default connect(null, mapDispatchToProps)(CommentForm);
